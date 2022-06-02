@@ -1,24 +1,27 @@
 <html>
 <head>
-	<title>Josh Jeppson</title>
+	<title>404: Page Not Found</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<script type="text/javascript" src="scripts/scripts.js"></script>
 	<script>
 	window.onload = function () {
+		// Disable the no-js message if JS is enabled
+		console.log("JavaScript appears to be enabled. Hiding the js-disabled div");
+		document.getElementById('js-disabled').display = "none";
+		document.getElementById('js-disabled').innerHTML = "";
 		var cmd = document.getElementById("main-command");
-		cmd.innerHTML.append(" " + window.location);
+		cmd.innerHTML += " " + window.location;
 		var res = document.getElementById("result");
 		var date = new Date().toLocaleString();
-		res.innerHTML.append(
+		res.innerHTML +=
 			"--" + date + "--" +  window.location
 			+ "<br>Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'"
 			+ "<br>Resolving ifndefjosh.github.io (ifndefjosh.github.io)... 185.199.111.153"
 			+ "<br>Connecting to ifndefjosh.github.io (ifndefjosh.github.io)|185.199.111.153|:443... connected."
 			+ "<br>HTTP request sent, awaiting response... 404 Not Found"
-			+ "<br>" + date + "ERROR 404: Not Found."
-		);
+			+ "<br>" + date + " ERROR 404: Not Found.";
 	}
 	</script>
 </head>
@@ -40,6 +43,7 @@
 		<div class="command-result" id="result">
 
 		</div>
+		<a href="index.html" class="button">[ GO BACK TO HOME ] </a>
 	<div id="footer">
 	<div class="prompt">
 			[webuser@joshjeppson ~/contact ]$
