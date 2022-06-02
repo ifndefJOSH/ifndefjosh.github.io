@@ -1,0 +1,56 @@
+<html>
+<head>
+	<title>Josh Jeppson</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="scripts/scripts.js"></script>
+	<script>
+	window.onload = function () {
+		var cmd = document.getElementById("main-command");
+		cmd.innerHTML.append(" " + window.location);
+		var res = document.getElementById("result");
+		var date = new Date().toLocaleString();
+		res.innerHTML.append(
+			"--" + date + "--" +  window.location
+			+ "<br>Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'"
+			+ "<br>Resolving ifndefjosh.github.io (ifndefjosh.github.io)... 185.199.111.153"
+			+ "<br>Connecting to ifndefjosh.github.io (ifndefjosh.github.io)|185.199.111.153|:443... connected."
+			+ "<br>HTTP request sent, awaiting response... 404 Not Found"
+			+ "<br>" + date + "ERROR 404: Not Found."
+		);
+	}
+	</script>
+</head>
+<body>
+<ul class="navbar" id="navbar">
+	<li style="float: left;"><a class="josh" id="josh" href="index.html">JOSH JEPPSON</a></li>
+</ul>
+<div class="top-buffer" id="top-buffer"><br></div>
+<div class="content">
+<div id="js-disabled" style="color: red; font-size: 16pt; font-weight: bold;">
+	Please enable JavaScript for this website to work properly.
+</div>
+		<div class="prompt">
+			[webuser@joshjeppson ~]$
+		</div>
+		<div class="command" id="main-command">
+			curl
+		</div>
+		<div class="command-result" id="result">
+
+		</div>
+	<div id="footer">
+	<div class="prompt">
+			[webuser@joshjeppson ~/contact ]$
+		</div>
+		<div class="command">
+			cat ~/credits.txt
+		</div>
+		<p>
+			This website, and all of its content, are written and created by Josh Jeppson. No templates were used in the creating of this website. The content of this site is all rights reserved, whereas the web design is CC-BY-SA.
+		</p>
+	</div>
+</div>
+</body>
+</html>
