@@ -65,6 +65,12 @@ function closeNav() {
 // 	document.getElementById("navbar").style.display = "none";
 }
 
+function closeNavIfNarrow() {
+	if (screen.width < 850) {
+		closeNav();
+	}
+}
+
 function copyIeee() {
 	copyCitation('ieee');
 }
