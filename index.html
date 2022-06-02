@@ -155,15 +155,12 @@
 		<div class="command">
 			./contact.sh
 		</div>
-		<form class="form" action="alertNotImplemented()">
+		<form class="form" action="alertNotImplemented()" style="margin-top: 20px">
 			<label for="name">Full Name:</label>
 			<input type="text" id="name" name="name" placeholder="Your name...">
 
-			<label for="organization">Organization:</label>
-			<input type="text" id="organization" name="organization" placeholder="Your organization...">
-
-			<label for="position">Position:</label>
-			<input type="text" id="position" name="position" placeholder="Your position...">
+			<label for="email">Email:</label>
+			<input type="text" id="email" name="email" placeholder="Your email...">
 
 			<label for="orgtype">I am:</label>
 			<select id="orgtype" name="orgtype">
@@ -173,12 +170,26 @@
 				<option value="fan">Someone who just thought you were super cool</option>
 			</select>
 
-			<label for="subject">Subject</label>
-			<textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+			<label for="message">Message</label>
+			<textarea id="message" name="message" placeholder="Write a nice message to me..." style="height:200px"></textarea>
 
 			<input type="submit" value="[ SUBMIT ]">
 
 		</form>
+	</div>
+	<p style="margin-top: 30px; margin-bottom: 30px;">
+	===========
+	</p>
+	<div id="footer">
+	<div class="prompt">
+			[webuser@joshjeppson ~/contact ]$
+		</div>
+		<div class="command">
+			cat ~/credits.txt
+		</div>
+		<p>
+			This website, and all of its content, are written and created by Josh Jeppson. No templates were used in the creating of this website. The content of this site is all rights reserved, whereas the web design is CC-BY-SA.
+		</p>
 	</div>
 </div>
 </body>
