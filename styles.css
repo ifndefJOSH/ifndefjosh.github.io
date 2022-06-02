@@ -161,7 +161,7 @@ p {
 .navbar li {
 	font-family: 'Noto Sans Mono', monospace;
 	display: inline;
-	float: right;
+	float: left;
 }
 
 .navbar li a, .dropbtn {
@@ -260,6 +260,9 @@ ul.navbar li.josh {
 	ul.navbar li {
 		float: none;
 		z-index: 1;
+	}
+	.navbuttons {
+		width: 100%;
 	}
 /*	.top-buffer {
 		height: 300px;
