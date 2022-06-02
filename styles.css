@@ -20,6 +20,7 @@ body {
 
 /**
  * Accent colors:
+ *	Lightest: #cdefff
  * 	Light: #638da3 to #638da3
  * 	Regular: #036ea3 to #036ea3
  *	Dark: #023d58 to #023d58
@@ -119,12 +120,13 @@ input[type=text], select, textarea {
 }
 
 a {
-	color: #023d58;
+	color: #cdefff;
 	text-decoration: none;
 }
 
 a:hover {
-	color: #036ea3;
+	color: #638da3;
+	text-decoration: underline;
 }
 
 p {
