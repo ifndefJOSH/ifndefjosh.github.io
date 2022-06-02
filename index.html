@@ -1,0 +1,185 @@
+<html>
+<head>
+	<title>Josh Jeppson</title>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="styles.css">
+	<script type="text/javascript" src="scripts/scripts.js"></script>
+</head>
+<body>
+<ul class="navbar" id="navbar">
+	<li style="float: left;"><a class="josh" id="josh" href="index.html">JOSH JEPPSON</a></li>
+	<li><a class="openbutton" id="openbutton" onclick="openNav()">&#9776;</a></li>
+	<li><a class="closebutton" id="closebutton" onclick="closeNav()">&times;</a></li>
+	<li><a class="navbutton" href="#contact">Contact</a></li>
+	<li><a href="#my-hobbies" class="navbutton">My Hobbies</a></li>
+	<li><a class="navbutton" href="#my-skills">My Skills</a></li>
+	<li><a class="navbutton" href="#about-me">About Me</a></li>
+	<li><a class="navbutton" href="#">Home</a></li>
+</ul>
+<div class="top-buffer" id="top-buffer"><br></div>
+<div class="content">
+<div id="js-disabled" style="color: red; font-size: 16pt; font-weight: bold;">
+	Please enable JavaScript for this website to work properly.
+</div>
+<div id="to-top" style="display: none;">
+	<a href="#" class="to-top">[ Back To Top ]</a>
+</div>
+
+	<h1>Welcome to my personal website!</h1>
+	<p>
+		I'm a PhD student at Utah State University with a passion for computing, open source software, net neutrality, and right-to-repair. I enjoy the mountains, fresh air, a clean environment, and working with my hands. I do many things from make music to write software, from repair cars to write poetry, and from binge Star Trek to running near-daily 10k's.
+	</p>
+	<div id="about-me">
+		<!--<h2>About Me</h2>-->
+		<div class="prompt">
+			[webuser@joshjeppson ~]$
+		</div>
+		<div class="command">
+			cat about_me.txt
+		</div>
+		<div class="command-result">
+			<p>
+				As of writing this, I am 23 years old and I have a bachelors' in Computer Engineering with minors in Computer Science and Mathematics. I am passionate about open source software and have used many Linux distros, including Debian, Manjaro, Arch, Kubuntu, Puppy, and others. I prefer anything with an open standard where I can, and I prefer to use command-line utilities such as <div class="inline-code">nvim</div>, <div class="inline-code">mutt</div>, and <div class="inline-code">calcurse</div>. Currently, I use Manjaro but I will soon hop to Artix for daily driving since I am not a fan of SystemD or the GNU Coreutils.
+			</p>
+			<p>
+				I was born in Cache Valley, Utah, and am very familiar with the local trails around the valley. In order to not doxx myself I'm not going to tell you exactly where I live, but it's close enough that I can drive to either Bear Lake or Promontory Point on a good day.
+			</p>
+			<p>
+				My favorite trails have lately been the Bonneville Shoreline Trail, Crimson, and White Pine, since they are all relatively easy to get to from where I live. I also love jogging on the Cache Connections trail, as well as a whole lot of "unmapped" trails in Logan, Providence, and Blacksmith Fork Canyon.
+			</p>
+		</div>
+	</div>
+	<div id="my-skills">
+		<div class="prompt">
+			[webuser@joshjeppson ~]$
+		</div>
+		<div class="command">
+			cd skills
+		</div><br>
+		<div class="prompt">
+			[webuser@joshjeppson ~/skills (git)]$
+		</div>
+		<div class="command">
+			cat skills.txt
+		</div>
+		<div class="command-result">
+			<p>
+				I am proficient in multiple programming languages, as well as have general skills in programming, cybersecurity, Linux, and general computing. The languages I am most proficient in (in no particular order) are as follows:
+			</p>
+			<ul>
+				<li>Python</li>
+				<li>C and C++</li>
+				<li>Java</li>
+				<li>Shell/zsh/bash</li>
+				<li>Octave and Matlab</li>
+				<li>LaTeX (Not a Programming Language)</li>
+				<li>Markdown, HTML, and CSS (Again, Not Programming Languages)</li>
+			</ul>
+			Some languages that I am less proficient in, but still are noteworthy, are the following:
+			<ul>
+				<li>Kotlin</li>
+				<li>JavaScript</li>
+				<li>VimScript</li>
+				<li>Perl/Raku</li>
+				<li>Scheme/Lisp (I could probably pick up Clojure fairly easily)</li>
+				<li>Haskell</li>
+				<li>Rust</li>
+			</ul>
+			And finally, languages I don't have much experience in but would have substantial interest in learning:
+			<ul>
+				<li>Dart (with Flutter)</li>
+				<li>Lua (NeoVim supports Lua configs and they are *much* faster than VimScript</li>
+			</ul>
+			But beyond programming I have many other skills and hobbies to fill my days. I am pretty proficient in repairing computer hardware, and I have also acquired the *wonderful* skill of car repair. I have repaired many of the components (including the head gasket) in my 2001 Toyota Camry.
+		</div>
+	</div>
+	<div id="my-hobbies">
+		<div class="prompt">
+			[webuser@joshjeppson ~/skills (git)]$
+		</div>
+		<div class="command">
+			cd ../hobbies
+		</div><br>
+		<div class="prompt">
+			[webuser@joshjeppson ~/hobbies (git)]$
+		</div>
+		<div class="command">
+			cat hobbies.txt
+		</div>
+		<p>
+			My hobbies include running, hiking, backpacking, cooking, working on my car, and riding my bike.
+		</p>
+		<div class="prompt">
+			[webuser@joshjeppson ~/hobbies (git)]$
+		</div>
+		<div class="command">
+			cd images
+		</div><br>
+		<div class="prompt">
+			[webuser@joshjeppson ~/hobbies/images (git)]$
+		</div>
+		<div class="command">
+			imagemagick *.jpeg
+		</div>
+		<img src="images/trail.jpg">
+		(One of my favorite running trails)
+		<img src="images/daisy.jpg">
+		(My parents' dog, Daisy)
+		<img src="images/garlic_bread.jpg">
+		(Some delicious garlic bread I made)
+		<img src="images/tofu_sandwich.jpg">
+		(Grilled, breaded tofu with provolone on whole-grain)
+		<img src="images/geese.jpg">
+		(Some geese I saw while out one day)
+	</div>
+	<div id="contact">
+		<div class="prompt">
+			[webuser@joshjeppson ~/skills (git)]$
+		</div>
+		<div class="command">
+			cd ~/contact
+		</div><br>
+		<div class="prompt">
+			[webuser@joshjeppson ~/contact ]$
+		</div>
+		<div class="command">
+			cat contact.txt
+		</div><br>
+
+		Contact information for Joshua Jeppson:<br><br>
+		NOTE: I'm a little cagey about my personal information, so I don't like to just give it out over the internet. Rather than make my life harder by making my email visible, just contact me via this form:<br>
+		<div class="prompt">
+			[webuser@joshjeppson ~/contact ]$
+		</div>
+		<div class="command">
+			./contact.sh
+		</div>
+		<form class="form" action="alertNotImplemented()">
+			<label for="name">Full Name:</label>
+			<input type="text" id="name" name="name" placeholder="Your name...">
+
+			<label for="organization">Organization:</label>
+			<input type="text" id="organization" name="organization" placeholder="Your organization...">
+
+			<label for="position">Position:</label>
+			<input type="text" id="position" name="position" placeholder="Your position...">
+
+			<label for="orgtype">I am:</label>
+			<select id="orgtype" name="orgtype">
+				<option value="linux-fanboi">A fellow open-source enthusiast</option>
+				<option value="friend">Someone who shares one or more of your interests</option>
+				<option value="recruiter">A recruiter looking for a new developer</option>
+				<option value="fan">Someone who just thought you were super cool</option>
+			</select>
+
+			<label for="subject">Subject</label>
+			<textarea id="subject" name="subject" placeholder="Write something..." style="height:200px"></textarea>
+
+			<input type="submit" value="[ SUBMIT ]">
+
+		</form>
+	</div>
+</div>
+</body>
+</html>
