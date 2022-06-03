@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="63.18718mm"
+   height="63.187004mm"
+   viewBox="0 0 63.18718 63.187004"
+   version="1.1"
+   id="svg5"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs2" />
+  <g
+     id="layer1"
+     transform="translate(-103.77059,-67.330536)">
+    <path
+       id="rect846"
+       style="fill:#333333;stroke-width:5.252;stroke-linecap:round;paint-order:markers fill stroke"
+       d="m 112.3206,67.330536 h 46.08716 c 4.7367,0 8.55001,3.813293 8.55001,8.549986 v 46.087018 c 0,4.7367 -3.81331,8.55 -8.55001,8.55 H 112.3206 c -4.7367,0 -8.55001,-3.8133 -8.55001,-8.55 V 75.880522 c 0,-4.736693 3.81331,-8.549986 8.55001,-8.549986 z" />
+    <g
+       aria-label="[~j]"
+       id="text3754"
+       style="font-size:31.3111px;line-height:1.25;letter-spacing:0px;stroke-width:0.782778"
+       transform="matrix(1,0,0,0.99999717,0,1.9006645e-4)">
+      <path
+         d="m 118.28538,107.46352 v 2.84646 h -8.5394 V 84.691807 h 8.5394 v 2.846464 h -5.69293 v 19.925249 z"
+         style="font-weight:500;font-family:scientifica;-inkscape-font-specification:'scientifica Medium';fill:#00ff00"
+         id="path14180" />
+      <path
+         d="m 121.13186,101.77059 v -2.846465 h 2.84646 v 2.846465 z m 2.84646,-2.846465 v -2.846463 h 2.84646 v 2.846463 z m 2.84646,2.846465 v -2.846465 h 2.84647 v 2.846465 z m 2.84647,0 h 2.84646 v 2.84646 h -2.84646 z m 2.84646,0 v -2.846465 h 2.84646 v 2.846465 z"
+         style="font-weight:500;font-family:scientifica;-inkscape-font-specification:'scientifica Medium';fill:#00ff00"
+         id="path14182" />
+      <path
+         d="m 135.36419,113.15644 v -2.84646 h 5.69293 v 2.84646 z m 2.84646,-17.078778 v -2.846464 h 5.69293 v 17.078782 h -2.84646 V 96.077662 Z m 2.84647,-5.692928 v -2.846463 h 2.84646 v 2.846463 z"
+         style="font-weight:500;font-family:scientifica;-inkscape-font-specification:'scientifica Medium';fill:#00ff00"
+         id="path14184" />
+      <path
+         d="m 160.98238,110.30998 h -8.53939 v -2.84646 h 5.69292 V 87.538271 h -5.69292 v -2.846464 h 8.53939 z"
+         style="font-weight:500;font-family:scientifica;-inkscape-font-specification:'scientifica Medium';fill:#00ff00"
+         id="path14186" />
+    </g>
+  </g>
+</svg>
