@@ -1,5 +1,40 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;800&family=Noto+Sans:wght@400;800&display=swap');
 
+.hello-world, .hw-cursor {
+	font-weight: bold;
+	font-size: 32pt;
+	color: #00ff7f;
+	display: inline;
+}
+
+@keyframes flickerAnimation {
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-o-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-moz-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+@-webkit-keyframes flickerAnimation{
+  0%   { opacity:1; }
+  50%  { opacity:0; }
+  100% { opacity:1; }
+}
+.hw-cursor {
+   -webkit-animation: flickerAnimation 1s infinite;
+   -moz-animation: flickerAnimation 1s infinite;
+   -o-animation: flickerAnimation 1s infinite;
+    animation: flickerAnimation 1s infinite;
+	z-index: -10;
+}
+
 body {
 	background-color: #000000;
 	color: white;

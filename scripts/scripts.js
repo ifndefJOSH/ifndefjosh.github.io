@@ -1,3 +1,16 @@
+
+var i = 0;
+var helloWorld = 'Hello World!';
+var speed = 200;
+
+function typeWriter() {
+	if (i < helloWorld.length) {
+		document.getElementById("hello-world").innerHTML += helloWorld.charAt(i);
+		i++;
+		setTimeout(typeWriter, speed);
+	}
+}
+
 /**
 * This script lets us monitor the window size and reset the navbar if it's larger than 800px
 * */
@@ -38,6 +51,7 @@ window.onload = function () {
 	console.log("JavaScript appears to be enabled. Hiding the js-disabled div");
 	document.getElementById('js-disabled').display = "none";
 	document.getElementById('js-disabled').innerHTML = "";
+	typeWriter();
 }
 /**
  * This function opens the navbar when the screen is less than 800px
