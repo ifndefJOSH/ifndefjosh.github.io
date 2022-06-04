@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+Mono:wght@400;800&family=Noto+Sans:wght@400;800&display=swap');
 
+.prompt-and-command, .command-result {
+	display: none;
+}
+
 .hello-world, .hw-cursor {
 	font-weight: bold;
 	font-size: 32pt;
@@ -65,13 +69,13 @@ body {
 	display: none;
 }
 
-.prompt, .command {
+.prompt, .command, .prompt-footer, .command-footer {
 	display: inline;
 	font-size: 16pt;
 	font-weight: bold;
 }
 
-.prompt {
+.prompt, .prompt-footer {
 	color: #00ff7f;
 }
 

@@ -6,6 +6,7 @@
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" type="image/x-icon" href="images/favicon.svg">
 	<script type="text/javascript" src="scripts/scripts.js"></script>
+	<script type="text/javascript" src="scripts/showElements.js"></script>
 </head>
 <body>
 <ul class="navbar" id="navbar">
@@ -13,11 +14,11 @@
 	<li><a class="openbutton" id="openbutton" onclick="openNav()">&#9776;</a></li>
 	<li><a class="closebutton" id="closebutton" onclick="closeNav()">&times;</a></li>
 	<div style="float: right;" class="navbuttons">
-		<li><a class="navbutton" href="#">Home</a></li>
-		<li><a class="navbutton" href="#about-me">About Me</a></li>
-		<li><a class="navbutton" href="#my-skills">My Skills</a></li>
-		<li><a href="#my-hobbies" class="navbutton">My Hobbies</a></li>
-		<li><a class="navbutton" href="#contact">Contact</a></li>
+		<li><a class="navbutton" href="#" onclick="hideAll()">Home</a></li>
+		<li><a class="navbutton" href="#about-me" onclick="showAbout()">About Me</a></li>
+		<li><a class="navbutton" href="#my-skills" onclick="showSkills()">My Skills</a></li>
+		<li><a href="#my-hobbies" class="navbutton" onclick="showHobbies()">My Hobbies</a></li>
+		<li><a class="navbutton" href="#contact" onclick="showContact()">Contact</a></li>
 	</div>
 </ul>
 <div class="top-buffer" id="top-buffer"><br></div>
@@ -32,17 +33,25 @@
 	<div class="hw-cursor" id="hw-cursor">&#9609;</div>
 	<h1>Welcome to my personal website!</h1>
 	<p>
-		I'm a PhD student at Utah State University with a passion for computing, open source software, net neutrality, and right-to-repair. I enjoy the mountains, fresh air, a clean environment, and working with my hands. I do many things from make music to write software, from repair cars to write poetry, and from binge Star Trek to running near-daily 10k's.
+		I'm a PhD student at Utah State University with a passion for computing, open source software, net neutrality, and right-to-repair. I enjoy the mountains, fresh air, a clean environment, and working with my hands. I do many things from make music to write software, from repair cars to write poetry, and from binge Star Trek to running near-daily 10k's. Plus, not to brag or anything but I wrote this website myself by hand.
+	</p>
+	<p>
+		Please click on an option in the navbar to see more. Each element in the navbar shows only one piece of the site at a time. The "show" animations are somewhat stylized to look like a Linux/UNIX terminal.
+	</p>
+	<p>
+		Alternatively you can <a class="button" onclick="showAll()">[ SHOW ALL ]</a> or <a class="button" onclick="hideAll()">[ HIDE ALL ]</a>
 	</p>
 	<div id="about-me">
 		<!--<h2>About Me</h2>-->
-		<div class="prompt">
-			[webuser@joshjeppson ~]$
+		<div class="prompt-and-command" id="command-one">
+			<div class="prompt" id="command-one-prompt">
+				[webuser@joshjeppson ~]$
+			</div>
+			<div class="command" id="command-one-command">
+				cat about_me.txt
+			</div>
 		</div>
-		<div class="command">
-			cat about_me.txt
-		</div>
-		<div class="command-result">
+		<div class="command-result" id="command-one-result">
 			<p>
 				As of writing this, I am 23 years old and I have a bachelors' in Computer Engineering with minors in Computer Science and Mathematics. I am passionate about open source software and have used many Linux distros, including Debian, Manjaro, Arch, Kubuntu, Puppy, and others. I prefer anything with an open standard where I can, and I prefer to use command-line utilities such as <div class="inline-code">nvim</div>, <div class="inline-code">mutt</div>, and <div class="inline-code">calcurse</div>. Currently, I use Manjaro but I will soon hop to Artix for daily driving since I am not a fan of SystemD or the GNU Coreutils.
 			</p>
@@ -55,19 +64,23 @@
 		</div>
 	</div>
 	<div id="my-skills">
-		<div class="prompt">
-			[webuser@joshjeppson ~]$
+		<div class="prompt-and-command" id="command-two">
+			<div class="prompt">
+				[webuser@joshjeppson ~]$
+			</div>
+			<div class="command" id="command-two-command">
+				cd skills
+			</div>
 		</div>
-		<div class="command">
-			cd skills
-		</div><br>
-		<div class="prompt">
-			[webuser@joshjeppson ~/skills (git)]$
+		<div id="command-three" class="prompt-and-command">
+			<div class="prompt">
+				[webuser@joshjeppson ~/skills (git)]$
+			</div>
+			<div class="command" id="command-three-command">
+				cat skills.txt
+			</div>
 		</div>
-		<div class="command">
-			cat skills.txt
-		</div>
-		<div class="command-result">
+		<div class="command-result" id="command-three-result">
 			<p>
 				I am proficient in multiple programming languages, as well as have general skills in programming, cybersecurity, Linux, and general computing. The languages I am most proficient in (in no particular order) are as follows:
 			</p>
@@ -99,71 +112,90 @@
 		</div>
 	</div>
 	<div id="my-hobbies">
-		<div class="prompt">
-			[webuser@joshjeppson ~/skills (git)]$
+		<div id="command-four" class="prompt-and-command">
+			<div class="prompt">
+				[webuser@joshjeppson ~/skills (git)]$
+			</div>
+			<div class="command" id="command-four-command">
+				cd ../hobbies
+			</div>
 		</div>
-		<div class="command">
-			cd ../hobbies
-		</div><br>
-		<div class="prompt">
-			[webuser@joshjeppson ~/hobbies (git)]$
+		<div id="command-five" class="prompt-and-command">
+			<div class="prompt">
+				[webuser@joshjeppson ~/hobbies (git)]$
+			</div>
+			<div class="command" id="command-five-command">
+				cat hobbies.txt
+			</div>
 		</div>
-		<div class="command">
-			cat hobbies.txt
+		<div class="command-result" id="command-five-result">
+			<p>
+				My hobbies include running, hiking, backpacking, cooking, working on my car, and riding my bike. Basically every day, I run anywhere from 5 miles to 10 miles per day, and generally run about 6.2 miles (10 kilometers). Most of these runs are on local trails and in canyons, or more generally in more natural areas.
+			</p>
+			<p>
+				In addition to outdoor activities, I am an avid music producer. I only use open source software to produce music, including <a href="https://ardour.org">Ardour</a> and <a href="https://lmms.io">LMMS</a>. My published music is currently available on basically all platforms, including <a href="https://open.spotify.com/artist/56uSsHDQL6MrWWXZY3T0ns">Spotify</a>, but I have a number of songs which have not yet been published, which I would like to release soon under a new artist name: Infinite Impulse Response.
+			</p>
+			<a class="button" href="https://open.spotify.com/artist/56uSsHDQL6MrWWXZY3T0ns">[ CLICK HERE TO LISTEN TO MY MUSIC VIA SPOTIFY ]</a><br><br>
 		</div>
-		<p>
-			My hobbies include running, hiking, backpacking, cooking, working on my car, and riding my bike. Basically every day, I run anywhere from 5 miles to 10 miles per day, and generally run about 6.2 miles (10 kilometers). Most of these runs are on local trails and in canyons, or more generally in more natural areas.
-		</p>
-		<p>
-			In addition to outdoor activities, I am an avid music producer. I only use open source software to produce music, including <a href="https://ardour.org">Ardour</a> and <a href="https://lmms.io">LMMS</a>. My published music is currently available on basically all platforms, including <a href="https://open.spotify.com/artist/56uSsHDQL6MrWWXZY3T0ns">Spotify</a>, but I have a number of songs which have not yet been published, which I would like to release soon under a new artist name: Infinite Impulse Response.
-		</p>
-		<a class="button" href="https://open.spotify.com/artist/56uSsHDQL6MrWWXZY3T0ns">[ CLICK HERE TO LISTEN TO MY MUSIC VIA SPOTIFY ]</a><br><br>
-		<div class="prompt">
-			[webuser@joshjeppson ~/hobbies (git)]$
+		<div id="command-six" class="prompt-and-command">
+			<div class="prompt">
+				[webuser@joshjeppson ~/hobbies (git)]$
+			</div>
+			<div class="command" id="command-six-command">
+				cd images
+			</div><br>
 		</div>
-		<div class="command">
-			cd images
-		</div><br>
-		<div class="prompt">
-			[webuser@joshjeppson ~/hobbies/images (git)]$
+		<div id="command-seven" class="prompt-and-command">
+			<div class="prompt">
+				[webuser@joshjeppson ~/hobbies/images (git)]$
+			</div>
+			<div class="command" id="command-seven-command">
+				imagemagick *.jpeg
+			</div>
 		</div>
-		<div class="command">
-			imagemagick *.jpeg
+		<div id="command-seven-result" class="command-result">
+			<img src="images/trail.jpg">
+			(One of my favorite running trails)
+			<img src="images/daisy.jpg">
+			(My parents' dog, Daisy)
+			<img src="images/garlic_bread.jpg">
+			(Some delicious garlic bread I made)
+			<img src="images/tofu_sandwich.jpg">
+			(Grilled, breaded tofu with provolone on whole-grain)
+			<img src="images/geese.jpg">
+			(Some geese I saw while out one day)
 		</div>
-		<img src="images/trail.jpg">
-		(One of my favorite running trails)
-		<img src="images/daisy.jpg">
-		(My parents' dog, Daisy)
-		<img src="images/garlic_bread.jpg">
-		(Some delicious garlic bread I made)
-		<img src="images/tofu_sandwich.jpg">
-		(Grilled, breaded tofu with provolone on whole-grain)
-		<img src="images/geese.jpg">
-		(Some geese I saw while out one day)
 	</div>
 	<div id="contact">
-		<div class="prompt">
-			[webuser@joshjeppson ~/skills (git)]$
+		<div id="command-eight" class="prompt-and-command">
+			<div class="prompt">
+				[webuser@joshjeppson ~/skills (git)]$
+			</div>
+			<div class="command" id="command-eight-command">
+				cd ~/contact
+			</div><br>
 		</div>
-		<div class="command">
-			cd ~/contact
-		</div><br>
-		<div class="prompt">
-			[webuser@joshjeppson ~/contact ]$
+		<div id="command-nine" class="prompt-and-command">
+			<div class="prompt" id="command-nine-prompt">
+				[webuser@joshjeppson ~/contact ]$
+			</div>
+			<div class="command" id="command-nine-command">
+				cat contact.txt
+			</div><br>
 		</div>
-		<div class="command">
-			cat contact.txt
-		</div><br>
-
-		Contact information for Joshua Jeppson:<br><br>
-		NOTE: I'm a little cagey about my personal information, so I don't like to just give it out over the internet. Rather than make my life harder by making my email visible, just contact me via this form:<br>
-		<div class="prompt">
-			[webuser@joshjeppson ~/contact ]$
+		<div id="command-nine-result" class="command-result">
+			Contact information for Joshua Jeppson:<br><br>
+			NOTE: I'm a little cagey about my personal information, so I don't like to just give it out over the internet. Rather than make my life harder by making my email visible, just contact me via this form:<br>
 		</div>
-		<div class="command">
-			./contact.sh
+		<div id="command-ten" class="prompt-and-command">
+			<div class="prompt" id="command-ten-prompt">
+				[webuser@joshjeppson ~/contact ]$
+			</div>
+			<div class="command" id="command-ten-command">
+				./contact.sh
+			</div>
 		</div>
-		<form class="form" action="alertNotImplemented()" style="margin-top: 20px">
+		<form class="form command-result" action="alertNotImplemented()" style="margin-top: 20px" id="command-ten-result">
 			<label for="name">Full Name:</label>
 			<input type="text" id="name" name="name" placeholder="Your name...">
 
@@ -189,10 +221,10 @@
 	===========
 	</p>
 	<div id="footer">
-	<div class="prompt">
+	<div class="prompt-footer">
 			[webuser@joshjeppson ~/contact ]$
 		</div>
-		<div class="command">
+		<div class="command-footer">
 			cat ~/credits.txt
 		</div>
 		<p>
