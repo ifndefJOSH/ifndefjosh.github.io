@@ -1,52 +1,42 @@
 <html>
 <head>
-	<title>Home - Josh Jeppson</title>
+	<title>Home (Light) - Josh Jeppson</title>
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" type="image/x-icon" href="images/favicon.svg">
-	<script type="text/javascript" src="scripts/scripts.js"></script>
-	<script type="text/javascript" src="scripts/showElements.js"></script>
+	<!--Light version has no JavaScript-->
 </head>
 <body>
-<ul class="navbar" id="navbar">
-	<li style="float: left;"><a class="josh" id="josh" href="index.html">JOSH JEPPSON</a></li>
-	<li><a class="openbutton" id="openbutton" onclick="openNav()">&#9776;</a></li>
-	<li><a class="closebutton" id="closebutton" onclick="closeNav()">&times;</a></li>
-	<div style="float: right;" class="navbuttons">
-		<li><a class="navbutton" href="#" onclick="hideAll()">Home</a></li>
-		<li><a class="navbutton" href="#about-me" onclick="showAbout()">About Me</a></li>
-		<li><a class="navbutton" href="#my-skills" onclick="showSkills()">My Skills</a></li>
-		<li><a href="#my-hobbies" class="navbutton" onclick="showHobbies()">My Hobbies</a></li>
-		<li><a class="navbutton" href="#contact" onclick="showContact()">Contact</a></li>
-	</div>
-</ul>
 <div class="top-buffer" id="top-buffer"><br></div>
-<div class="content" onclick="closeNavIfNarrow()">
-<div id="js-disabled" style="color: red; font-size: 16pt; font-weight: bold;">
-	Please enable JavaScript for this website to work properly (This message disappears on page-load).
-	<p style="font-size: 10pt;">
-		If you're having trouble with this page, or you cannot enable JavaScript, there is a <a href="light.html">[ LIGHT ]</a> (no-script) version of this website you can browse.
-	</p>
+<div class="content">
+<h1> Contents</h1>
+<div style="display: block;">
+	<ul id="navbar">
+		<div class="navbuttons" style="font-size: 12pt;">
+			<li><a href="#">Home</a></li>
+			<li><a href="#about-me">About Me</a></li>
+			<li><a href="#my-skills">My Skills</a></li>
+			<li><a href="#my-hobbies">My Hobbies</a></li>
+			<li><a href="#contact">Contact</a></li>
+		</div>
+	</ul>
 </div>
-<div id="to-top" style="display: none;">
+<div id="to-top">
 	<a href="#" class="to-top">[ Back To Top ]</a>
 </div>
-	<div class="hello-world" id="hello-world">&gt;</div>
+	<div class="hello-world" id="hello-world">&gt; Hello World!</div>
 	<div class="hw-cursor" id="hw-cursor">&#9609;</div>
 	<h1>Welcome to my personal website!</h1>
 	<p>
 		I'm a PhD student at Utah State University with a passion for computing, open source software, net neutrality, and right-to-repair. I enjoy the mountains, fresh air, a clean environment, and working with my hands. I do many things from make music to write software, from repair cars to write poetry, and from binge Star Trek to running near-daily 10k's. Plus, not to brag or anything but I wrote this website myself by hand.
 	</p>
 	<p>
-		Please click on an option in the navbar to see more. Each element in the navbar shows only one piece of the site at a time. The "show" animations are somewhat stylized to look like a Linux/UNIX terminal.
-	</p>
-	<p>
-		Alternatively you can <a class="button" onclick="showAll()">[ SHOW ALL ]</a> or <a class="button" onclick="hideAll()">[ HIDE ALL ]</a>
+		This is the light version of the website (HTML-only). The "back-to-top" button is always visible, and the navbar is a table of contents rather than a navbar. You can <a href="index.html">[ RETURN TO THE FULL VERSION OF THE SITE ]</a> at any time.
 	</p>
 	<div id="about-me">
 		<!--<h2>About Me</h2>-->
-		<div class="prompt-and-command" id="command-one">
+		<div  id="command-one">
 			<div class="prompt" id="command-one-prompt">
 				[webuser@joshjeppson ~]$
 			</div>
@@ -54,7 +44,7 @@
 				cat about_me.txt
 			</div>
 		</div>
-		<div class="command-result" id="command-one-result">
+		<div  id="command-one-result">
 			<p>
 				As of writing this, I am 23 years old and I have a bachelors' in Computer Engineering with minors in Computer Science and Mathematics. I am passionate about open source software and have used many Linux distros, including Debian, Manjaro, Arch, Kubuntu, Puppy, and others. I prefer anything with an open standard where I can, and I prefer to use command-line utilities such as <div class="inline-code">nvim</div>, <div class="inline-code">mutt</div>, and <div class="inline-code">calcurse</div>. Currently, I use Manjaro but I will soon hop to Artix for daily driving since I am not a fan of SystemD or the GNU Coreutils.
 			</p>
@@ -67,7 +57,7 @@
 		</div>
 	</div>
 	<div id="my-skills">
-		<div class="prompt-and-command" id="command-two">
+		<div  id="command-two">
 			<div class="prompt">
 				[webuser@joshjeppson ~]$
 			</div>
@@ -75,7 +65,7 @@
 				cd skills
 			</div>
 		</div>
-		<div id="command-three" class="prompt-and-command">
+		<div id="command-three" >
 			<div class="prompt">
 				[webuser@joshjeppson ~/skills (git)]$
 			</div>
@@ -83,7 +73,7 @@
 				cat skills.txt
 			</div>
 		</div>
-		<div class="command-result" id="command-three-result">
+		<div  id="command-three-result">
 			<p>
 				I am proficient in multiple programming languages, as well as have general skills in programming, cybersecurity, Linux, and general computing. The languages I am most proficient in (in no particular order) are as follows:
 			</p>
@@ -115,7 +105,7 @@
 		</div>
 	</div>
 	<div id="my-hobbies">
-		<div id="command-four" class="prompt-and-command">
+		<div id="command-four" >
 			<div class="prompt">
 				[webuser@joshjeppson ~/skills (git)]$
 			</div>
@@ -123,7 +113,7 @@
 				cd ../hobbies
 			</div>
 		</div>
-		<div id="command-five" class="prompt-and-command">
+		<div id="command-five" >
 			<div class="prompt">
 				[webuser@joshjeppson ~/hobbies (git)]$
 			</div>
@@ -131,7 +121,7 @@
 				cat hobbies.txt
 			</div>
 		</div>
-		<div class="command-result" id="command-five-result">
+		<div  id="command-five-result">
 			<p>
 				My hobbies include running, hiking, backpacking, cooking, working on my car, and riding my bike. Basically every day, I run anywhere from 5 miles to 10 miles per day, and generally run about 6.2 miles (10 kilometers). Most of these runs are on local trails and in canyons, or more generally in more natural areas.
 			</p>
@@ -140,7 +130,7 @@
 			</p>
 			<a class="button" href="https://open.spotify.com/artist/56uSsHDQL6MrWWXZY3T0ns">[ CLICK HERE TO LISTEN TO MY MUSIC VIA SPOTIFY ]</a><br><br>
 		</div>
-		<div id="command-six" class="prompt-and-command">
+		<div id="command-six" >
 			<div class="prompt">
 				[webuser@joshjeppson ~/hobbies (git)]$
 			</div>
@@ -148,7 +138,7 @@
 				cd images
 			</div><br>
 		</div>
-		<div id="command-seven" class="prompt-and-command">
+		<div id="command-seven" >
 			<div class="prompt">
 				[webuser@joshjeppson ~/hobbies/images (git)]$
 			</div>
@@ -156,7 +146,7 @@
 				imagemagick *.jpeg
 			</div>
 		</div>
-		<div id="command-seven-result" class="command-result">
+		<div id="command-seven-result" >
 			<img src="images/trail.jpg">
 			(One of my favorite running trails)
 			<img src="images/daisy.jpg">
@@ -170,7 +160,7 @@
 		</div>
 	</div>
 	<div id="contact">
-		<div id="command-eight" class="prompt-and-command">
+		<div id="command-eight" >
 			<div class="prompt">
 				[webuser@joshjeppson ~/skills (git)]$
 			</div>
@@ -178,7 +168,7 @@
 				cd ~/contact
 			</div><br>
 		</div>
-		<div id="command-nine" class="prompt-and-command">
+		<div id="command-nine" >
 			<div class="prompt" id="command-nine-prompt">
 				[webuser@joshjeppson ~/contact ]$
 			</div>
@@ -186,11 +176,11 @@
 				cat contact.txt
 			</div><br>
 		</div>
-		<div id="command-nine-result" class="command-result">
+		<div id="command-nine-result" >
 			Contact information for Joshua Jeppson:<br><br>
 			NOTE: I'm a little cagey about my personal information, so I don't like to just give it out over the internet. Rather than make my life harder by making my email visible, just contact me via this form:<br>
 		</div>
-		<div id="command-ten" class="prompt-and-command">
+		<div id="command-ten" >
 			<div class="prompt" id="command-ten-prompt">
 				[webuser@joshjeppson ~/contact ]$
 			</div>
