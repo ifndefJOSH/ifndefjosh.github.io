@@ -1,3 +1,16 @@
+const inUseMutex = new Map([
+	[ "command-one", false]
+	, [ "command-two", false]
+	, [ "command-three", false]
+	, [ "command-four", false]
+	, [ "command-five", false]
+	, [ "command-six", false]
+	, [ "command-seven", false]
+	, [ "command-eight", false]
+	, [ "command-nine", false]
+	, [ "command-ten", false]
+]);
+
 function showCommand(commandId) {
 	let cmdAndPrompt = document.getElementById(commandId);
 	cmdAndPrompt.style.display = "block";
@@ -7,6 +20,16 @@ function showCommand(commandId) {
 	let command = document.getElementById(commandId + "-command");
 	var cmdText = command.innerHTML;
 
+	// Don't re-start the animation if already started
+	if (inUseMutex.get(commandId)) {
+		// Show a command result if we need to
+		let cmdResult = document.getElementById(commandId + "-result");
+		if (cmdResult != null) {
+			cmdResult.style.display = "block";
+		}
+		return;
+	}
+	inUseMutex.set(commandId, true);
 	command.innerHTML = "";
 	var i = 0;
 	var speed = 100;
@@ -16,6 +39,9 @@ function showCommand(commandId) {
 			command.innerHTML += cmdText.charAt(i);
 			i++;
 			setTimeout(typeWriter, speed);
+		}
+		else {
+			inUseMutex.set(commandId, false);
 		}
 	}
 	typeWriter();
