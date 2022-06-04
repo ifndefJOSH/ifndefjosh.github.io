@@ -5,7 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="stylesheet" href="styles.css">
 	<link rel="icon" type="image/x-icon" href="images/favicon.svg">
-	<script type="text/javascript" src="scripts/scripts.js"></script>
+<!-- 	<script type="text/javascript" src="scripts/scripts.js"></script> -->
 	<script>
 	window.onload = function () {
 		// Disable the no-js message if JS is enabled
@@ -16,8 +16,9 @@
 		cmd.innerHTML += " " + window.location;
 		var res = document.getElementById("result");
 		var date = new Date().toLocaleString();
+		console.log("Updating inner HTML to look like wget");
 		res.innerHTML +=
-			"--" + date + "--" +  window.location
+			date + "--" +  window.location
 			+ "<br>Loaded CA certificate '/etc/ssl/certs/ca-certificates.crt'"
 			+ "<br>Resolving ifndefjosh.github.io (ifndefjosh.github.io)... 185.199.111.153"
 			+ "<br>Connecting to ifndefjosh.github.io (ifndefjosh.github.io)|185.199.111.153|:443... connected."
@@ -42,8 +43,8 @@
 		<div class="command" id="main-command">
 			wget
 		</div>
-		<div class="command-result" id="result">
-
+		<div class="command-result" id="result" style="display: block;">
+			--
 		</div>
 		<a href="index.html" class="button">[ GO BACK TO HOME ] </a>
 	<div id="footer">
