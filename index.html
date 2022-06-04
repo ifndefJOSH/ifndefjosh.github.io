@@ -7,6 +7,8 @@
 	<link rel="icon" type="image/x-icon" href="images/favicon.svg">
 	<script type="text/javascript" src="scripts/scripts.js"></script>
 	<script type="text/javascript" src="scripts/showElements.js"></script>
+	<!-- Form integration -->
+	 <script src="https://kwesforms.com/v2/kwes-script.js" defer></script>
 </head>
 <body>
 <ul class="navbar" id="navbar">
@@ -198,12 +200,12 @@
 				./contact.sh
 			</div>
 		</div>
-		<form class="form command-result" action="alertNotImplemented()" style="margin-top: 20px" id="command-ten-result">
+		<form class="form command-result kwes-form" action="https://kwesforms.com/api/foreign/forms/fIKPZ2I3XIvIVQmMmTfM" style="margin-top: 20px" id="command-ten-result">
 			<label for="name">Full Name:</label>
-			<input type="text" id="name" name="name" placeholder="Your name...">
+			<input type="text" id="name" name="name" placeholder="Your name..." rules="required|max:255">
 
 			<label for="email">Email:</label>
-			<input type="text" id="email" name="email" placeholder="Your email...">
+			<input type="text" id="email" name="email" placeholder="Your email..." rules="required|max:255">
 
 			<label for="orgtype">I am:</label>
 			<select id="orgtype" name="orgtype">
@@ -214,7 +216,7 @@
 			</select>
 
 			<label for="message">Message</label>
-			<textarea id="message" name="message" placeholder="Write a nice message to me..." style="height:200px"></textarea>
+			<textarea id="message" name="message" placeholder="Write a nice message to me..." style="height:200px" rules="required"></textarea>
 
 			<input type="submit" value="[ SUBMIT ]">
 
