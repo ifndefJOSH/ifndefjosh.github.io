@@ -232,10 +232,11 @@ p {
 	padding-right: 40px;
 	background-color: #0c0c0c;
 	float: left;
+	color: #00ff7f;
 }
 
 #josh:hover {
-	color: #638da3;
+	color: #9bffcb;
 }
 
 .navbar .openbutton, .navbar .closebutton {
