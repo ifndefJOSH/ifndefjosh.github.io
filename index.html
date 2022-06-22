@@ -24,6 +24,23 @@
 	</div>
 </ul>
 <div class="top-buffer" id="top-buffer"><br></div>
+<div class="image-expanded" id="image-expanded">
+	<img class="gallery-image" id="gallery-image" height=80% src="images/daisy.jpg">
+	<div class="close-button" onclick="closeExpandedImage()">&times;</div>
+</div>
+<script>
+function closeExpandedImage() {
+	let gal = document.getElementById('image-expanded');
+	gal.style.display = "none";
+}
+
+function setExpandedImage(source) {
+	let gal = document.getElementById('image-expanded');
+	gal.style.display = "block";
+	let img = document.getElementById('gallery-image');
+	img.src = source;
+}
+</script>
 <div class="content" onclick="closeNavIfNarrow()">
 <div id="js-disabled" style="color: red; font-size: 16pt; font-weight: bold;">
 	Please enable JavaScript for this website to work properly (This message disappears on page-load).
@@ -159,15 +176,15 @@
 			</div>
 		</div>
 		<div id="command-seven-result" class="command-result">
-			<img src="images/trail.jpg">
+			<a onclick="setExpandedImage('images/trail.jpg')"><img src="images/trail.jpg"></a>
 			(One of my favorite running trails)
-			<img src="images/daisy.jpg">
+			<a onclick="setExpandedImage('images/daisy.jpg')"><img src="images/daisy.jpg"></a>
 			(My parents' dog, Daisy)
-			<img src="images/garlic_bread.jpg">
+			<a onclick="setExpandedImage('images/garlic_bread.jpg')"><img src="images/garlic_bread.jpg"></a>
 			(Some delicious garlic bread I made)
-			<img src="images/tofu_sandwich.jpg">
+			<a onclick="setExpandedImage('images/tofu_sandwich.jpg')"><img src="images/tofu_sandwich.jpg"></a>
 			(Grilled, breaded tofu with provolone on whole-grain)
-			<img src="images/geese.jpg">
+			<a onclick="setExpandedImage('images/geese.jpg')"><img src="images/geese.jpg"></a>
 			(Some geese I saw while out one day)
 		</div>
 	</div>

@@ -10,6 +10,34 @@
 	border: 2px red solid;
 }
 
+.image-expanded {
+	display: none;
+	position: fixed;
+	width: 80%;
+	height: 80%;
+	top: 10%;
+	left: 10%;
+	background-color: black;
+	border: 1px solid white;
+	text-align: center;
+}
+
+.close-button {
+	font-family: 'Noto Sans Mono', monospace;
+	font-size: 24pt;
+	cursor: pointer;
+	position: absolute;
+	right: -10px;
+	bottom: -10px;
+	padding: 10px;
+	background-color: black;
+	border: 1px solid white;
+}
+
+.gallery-image {
+	padding: 30px;
+}
+
 .prompt-and-command, .command-result {
 	display: none;
 }
