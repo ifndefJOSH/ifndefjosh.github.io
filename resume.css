@@ -69,6 +69,7 @@ main {
 
 .name {
 	font-family: "Scientifica", monospace;
+	src: url('font/scientificaBold.ttf')  format('truetype');
 	padding-left: 30px;
 }
 
