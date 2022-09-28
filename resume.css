@@ -67,9 +67,13 @@ main {
 	background-color: var(--accent-two);
 }
 
+@font-face {
+	font-family: "Scientifica";
+	src: url('font/scientifica.ttf')  format('truetype');
+}
+
 .name {
 	font-family: "Scientifica", monospace;
-	src: url('font/scientificaBold.ttf')  format('truetype');
 	padding-left: 30px;
 }
 
