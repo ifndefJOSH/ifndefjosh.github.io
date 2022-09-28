@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Cover Letter - Josh Jeppson</title>
+		<link rel="stylesheet" href="resume.css">
+		<script type="text/javascript" src="resume.js"></script>
+	</head>
+	<style>
+@import url('https://fonts.googleapis.com/css2?family=Shadows+Into+Light&display=swap');
+#back:before {
+	overflow: hidden;
+	display: inline-block;
+	padding-right: 25px;
+	font-size: 12pt;
+	opacity: 0%;
+	transition: all 200ms ease-out;
+}
+
+#back:hover:before {
+/* 	animation: slide-out 1s ease; */
+	width: auto;
+	content: " Back to Resume";
+	opacity: 100%;
+}
+
+@keyframes slide-out {
+	from {
+		width: 0px;
+		overflow: hidden;
+	}
+	to {
+		width: auto;
+		overflow: hidden;
+	}
+}
+
+#signature {
+	font-size: 24pt;
+	font-family: 'Shadows Into Light', cursive;
+}
+
+#signature:before {
+	content: "Joshua G Jeppson";
+}
+	</style>
+	<script>
+/*
+ * Taken from https://stackoverflow.com/questions/901115/how-can-i-get-query-string-values-in-javascript
+ * */
+function getParameterByName(name, url = window.location.href) {
+	name = name.replace(/[\[\]]/g, '\\$&');
+	var regex = new RegExp('[?&]' + name + '(=([^&#]*)|&|#|$)'),
+	results = regex.exec(url);
+	if (!results) return null;
+	if (!results[2]) return '';
+	return decodeURIComponent(results[2].replace(/\+/g, ' '));
+}
+
+window.onload = function() {
+	let company = getParameterByName('company');
+	let position = getParameterByName('position');
+	let all = getParameterByName('all');
+	let web = false;
+	let architecture = false;
+	let hdl = false;
+	let formalMethods = false;
+	if (!all) {
+		web = getParameterByName('web');
+		web = web != null && web == "true";
+		architecture = getParameterByName('architecture');
+		architecture = architecture != null && architecture == "true";
+		hdl = getParameterByName('hdl');
+		hdl = hdl != null && hdl == "true";
+		formalMethods = getParameterByName('formal-methods');
+		formalMethods = formalMethods != null && formalMethods == "true";
+	}
+	else {
+		web = true;
+		architecture = true;
+		hdl = true;
+		formalMethods = true;
+	}
+	/*
+		Fill company name and position name
+	*/
+	let companyNames = document.querySelectorAll('.company-name');
+	console.log(companyNames);
+	companyNames.forEach(element => {
+		element.innerHTML = company;
+	});
+	document.querySelectorAll('.position-name').forEach(element => element.innerHTML = position);
+	// Hide paragraphs unused by this company
+	if (!web) {
+		document.getElementById('web').style.display = 'none';
+	}
+	if (!architecture) {
+		document.getElementById('architecture').style.display = 'none';
+	}
+	if (!hdl) {
+		document.getElementById('hdl').style.display = 'none';
+	}
+	if (!formalMethods) {
+		document.getElementById('formal-methods').style.display = 'none';
+	}
+}
+	</script>
+	<body>
+		<!-- The main content -->
+		<header>
+		<span class=name>Josh Jeppson</span>
+		<a class="navexpand" href="resume.html" title="Back to Resume" id="back">&#10096;</a>
+		</header>
+	<noscript>
+	<div class=noscript>
+		This page requires JavaScript to function properly
+	</div>
+	</noscript>
+		<main>
+		To the hiring personnel at <span class="company-name">Company Name</span>,
+		<p id="into">
+			I feel like I would be a good fit at <span class="company-name">Company Name</span> for the <span class="position-name">Position Name</span> position. I have a strong work ethic, attention to detail, and I am a very creative problem solver; just look at this dynamic cover letter! You may have noticed that this page of my website takes URL queries and auto-populates your organization's name and position throughout the letter, and even tailors the contents of the letter to the type of position I'm applying for; I wrote that all myself, using a little JavaScript and ingenuity, and since basically everyone recycles cover letters <i>anyway</i>, I figured I could use it as an opportunity to show you what I could do!
+		</p>
+		<p id="web">
+			As I hope I have already shown, I am very knowledgeable about various web and networking technologies, including HTML, CSS, JavaScript, SQL and PHP, as well as the underlying protocols, such as HTTP and TCP/IP. Although I am willing to use many of the fancy frameworks like Bootstrap people are in love with, I prefer to write my websites in vanilla HTML/CSS/JS, without importing anything (except for a font or two). This makes my websites both responsive <i>and</i> fast!
+		</p>
+		<p id="architecture">
+			You've seen my skill on the web, but something you may not have known is I'm very proficient in computer architecture, and low-level coding. I am very good at C++, C, and Verilog, and I've written and worked in both ARM and x86_64 Assembly code (obviously ARM is much easier since it's a RISC). I'm memory-conscious, and will write minimally intensive code that is easy to read and efficient.
+		</p>
+		<p id=hdl>
+			I'm also rather proficient at Hardware Description Languages (HDLs), namely Verilog. I have been the TA for an introductory Digital Circuits course several times, and am knowledgeable about behavioral and structural Verilog, as well as VLSI testing using the TetraMax tool. I understand testing for both the circuit design as well as the fabricated model.
+		</p>
+		<p id=formal-methods>
+			Additionally, I am proficient in many methodologies regarding formal methods and formal verification. I know both the PRISM and IVy description languages, and am very familiar with both tools. In fact, I am currently the maintainer of <a href="https://staminachecker.org">STAMINA</a> (as well as the main developer for it's recent rebasing and integration with Storm), an infinite-state CTMC/DTMC truncation tool which takes in unbounded PRISM models and truncates them where most of the probability mass is. Although two students before me came up with (and then improved) the algorithm STAMINA uses, I improved the algorithm's runtime and even came up with a multithreading protocol which I am in process of implementing. We are expecting to soon publish multiple papers with the various work I have done on STAMINA, so stay tuned!
+		<p>
+		<p id="conclusion">
+			So if you're looking to hire a hardworking, skilled, creative employee, and your organization has a good culture, work-life balance, and salary, I'd hope you will consider me! I'm looking for a workplace where I can work hard, and love what I do, so let's chat and see if your position can be a mutually beneficial professional relationship, working at <span class="company-name">Company Name</span>. I look forward to hearing from you!
+		</p>
+		<div id=sigsection>
+			<div id=signed>Signed,</div>
+			<div id=signature></div>
+		</div>
+		</main>
+		<footer>This resume website was written by hand by Josh Jeppson. The source code is available <a href="#">here</a>. This resume is hosted by GitHub pages.<br>
+		<small style="display: inline-block; margin-top: 30px;">I tried to make this website look similar to Google's "Material" design. Tell me what you think!</small>
+		</footer>
+	</body>
+</html>

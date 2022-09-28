@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Resume - Josh Jeppson</title>
+		<link rel="stylesheet" href="resume.css">
+		<script type="text/javascript" src="resume.js"></script>
+	</head>
+	<body>
+		<!-- The navigation bottle -->
+		<div class="sidebar sidebar-hide" id=sidebar>
+			<a href="javascript:closeSidebar()">&times;</a>
+			<a href="https://ifndefJOSH.github.io">My Website</a>
+			<a href="https://github.com/ifndefJOSH">My GitHub Profile</a>
+			<a href="https://github.com/ifndefJOSH/#contact">Contact Me</a>
+			<a href="coverletter.html">Cover Letter</a>
+		</div>
+		<!-- The main content -->
+		<header>
+		<span class=name>Josh Jeppson</span>
+		<div class="navexpand" onclick="openSidebar()">&#x2630;</div>
+		</header>
+	<noscript>
+	<div class=noscript>
+		This page requires JavaScript to function properly
+	</div>
+	</noscript>
+		<main>
+			<div class="section section-visible" style="display: block;">
+				<a class="button" href="https://ifndefjosh.github.io">My Website</a><a class="button" href="https://github.com/ifndefJOSH">My GitHub Profile</a>
+		<!--		My website: <a href="https://ifndefjosh.github.io">https://ifndefjosh.github.io</a><br>
+				My GitHub: <a href="https://github.com/ifndefJOSH">https://github.com/ifndefJOSH</a>-->
+				<p>
+					I'm a proficient software developer who mostly writes in C++ and Python, but am familiar with many languages and frameworks. This page is my de-facto "resume". My personal information is not available on this website, however. If I've applied to a job at your organization, you will have my contact info with the application, otherwise, you can use the contact form on <a href="https://ifndefjosh.github.io">my GitHub.io page</a>.
+				</p>
+			</div>
+			<div onclick="collapse('programming-languages')"><h1 id="programming-languages-header">Programming Languages</h1></div>
+			<div id="programming-languages" class="section">
+				I am familiar with a number of programming languages from a wide variety of applications.
+				<ul>
+				<li><b>Compiled Programming Languages (Machine-code and Bytecode):</b>
+					C++, C, Java, Kotlin, as well as minimal experience in Rust and Fortran</li>
+				<li><b>Scripting Languages: </b>Python, POSIX Shell (Bash or Zsh typically), JavaScript, Matlab/Octave, Perl/Raku and <span id="vba">VBA<span id="vba-extra"> (Honestly, not that proud of that last one--I learned it for an internship that I had to use Excel, Word and Access a lot for.)</span></span></li>
+				<li><b>Functional Languages: </b>Scheme (the LISP dialect), Haskell</li>
+				<li><b>Other: </b>Verilog, LaTeX, HTML/CSS, PHP, IVy (Formal Methods), PRISM (Formal Verification), VimScript</li>
+				</ul>
+			</div>
+			<div onclick="collapse('education')"><h1 id="education-header">Education and Employment</h1></div>
+			<div id="education" class="section">
+				<h2>Education</h2>
+				<h3>B.Sc., Computer Engineering - Utah State University</h3>
+				<i>2018-2021</i> GPA: 3.79
+				<p>
+					Majored in Computer Engineering and Minored in Mathematics and Computer Science.
+				</p>
+				<h3>Graduate School - Utah State University</h3>
+				<i>2021 - Present</i>
+				<p>
+					Currently pursing a PhD in Electrical Engineering. Working with Dr. Zhen Zhang and developing STAMINA.
+				</p>
+				<h2>Employment</h2>
+				<h3>Research Work + TA (Undergraduate and Graduate) - Utah State University</h3>
+				<i>Jan 2021 - Present</i>
+				<p>Graded papers and wrote research software and websites for our research group.</p>
+				<h3>College Math Tutor - Utah State University</h3>
+				<i>August 2019 - December 2021</i>
+				<p>
+					Provided tutoring and math help for a wide range of courses, from Calculus to Linear Algebra and Differential Equations.
+				</p>
+			</div>
+			<div onclick="collapse('projects')"><h1 id="projects-header">Projects &amp; Portfolio</h1></div>
+			<div id="projects" class="section">
+				I've only included programming projects here, as I'm a professional software developer; if you want to see my CGI projects, or my electronic music, or something else that falls more into my "hobbies" you're on the wrong website.
+				<h2>STAMINA/STORM</h2>
+				<span class=badge>C++</span>
+				<span class=badge>CMake</span>
+				<span class=badge>Qt</span>
+				<span class=badge>Python</span>
+				<p>
+					STAMINA/STORM is a complete rebasing of STAMINA, the STochastic Approximate Model-checker for INfinite-state Analysis. I spent quite some time rebasing STAMINA to work with the Storm Model Checker, rewriting the entirety of STAMINA/STORM's C++ codebase I was initially given. I also spent some time writing a Python/PyQt5 GUI for it, but decided that STAMINA deserved a more powerful interface, so I am in process of writing a far more capable interface with C++, complete with a PRISM model file editor that includes syntax highlighting!
+				</p>
+				<a href="https://github.com/fluentverification/stamina-storm" class="button">GitHub</a>
+				<h2>STAMINA'S WEBSITE</h2>
+				<span class=badge>HTML</span>
+				<span class=badge>CSS</span>
+				<span class=badge>JavaScript</span>
+				<p>
+					In addition to rebasing STAMINA to work with Storm, I also wrote a website for STAMINA. Go poke around on it, it's pretty cool! Like basically every website I do, I didn't use a template, and wrote it all myself with little more than a text editor and web browser. I even included a client-side search script, that loads up an index of the website and searches for text in the main content or title of a page.
+				</p>
+				<a href="https://staminachecker.org" class="button">Website</a><a href="https://github.com/fluentverification/staminachecker.org" class="button">Source Code</a>
+				<h2>NODESYNTH (UNFINISHED)</h2>
+				<span class=badge>C++</span>
+				<span class=badge>CMake</span>
+				<span class=badge>Qt</span>
+				<p>
+					Nodesynth was my senior project, but I was unfortunately never able to get it to work. I was building it to work similar to <a href="https://en.wikipedia.org/wiki/Compositing_software">compositing software</a>, but for sound. You would have many building blocks (oscillators, filters, modulators, etc.) which you could declare as "nodes" on the canvas and connect in any way imaginable. Best of all, as a LV2 and VST plugin, it would be able to process audio in <i>realtime</i>.
+				</p>
+				<a href="https://github.com/ifndefJOSH/nodesynth" class="button">GitHub</a>
+				<h2>GUI for LaTeX to MathML</h2>
+				<span class=badge>Python</span>
+				<span class=badge>Qt</span>
+				<span class=badge>LaTeX</span>
+				<p>
+					When I worked for the Aggie Math Learning Center, they wanted us to write some math tutorials for their website. However, we couldn't write math equations in LaTeX, since it was for a website. I found a Python library for LaTeX to MathML conversion, but most of my coworkers at the time weren't programmers, so I wrote a GUI in Python and PyQt5 that could both construct a LaTeX equation, and then make a call to that library to change them into MathML.
+				</p>
+				<a href="https://github.com/ifndefJOSH/l2mml" class="button">GitHub</a>
+				<h2>MY HOMEPAGE &amp; THIS WEBSITE</h2>
+				<span class=badge>HTML</span>
+				<span class=badge>CSS</span>
+				<span class=badge>JavaScript</span>
+				<p>
+					Take a look around! See what you think!
+				</p>
+			</div>
+			<div onclick="collapse('references')"><h1 id="references-header">References</h1></div>
+			<div id="references" class="section">
+				References are available upon request.
+			</div>
+		</main>
+		<footer>This resume website was written by hand by Josh Jeppson. The source code is available <a href="#">here</a>. This resume is hosted by GitHub pages.<br>
+		<small style="display: inline-block; margin-top: 30px;">I tried to make this website look similar to Google's "Material" design. Tell me what you think!</small>
+		</footer>
+	</body>
+</html>
