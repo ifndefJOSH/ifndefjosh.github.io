@@ -49,8 +49,8 @@ window.onload = function () {
 	}
 	// Disable the no-js message if JS is enabled
 	console.log("JavaScript appears to be enabled. Hiding the js-disabled div");
-	document.getElementById('js-disabled').display = "none";
-	document.getElementById('js-disabled').innerHTML = "";
+// 	document.getElementById('js-disabled').display = "none";
+// 	document.getElementById('js-disabled').innerHTML = "";
 	typeWriter();
 }
 /**
